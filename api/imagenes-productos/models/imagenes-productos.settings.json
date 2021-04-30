@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imagenes_productos",
+  "info": {
+    "name": "ImagenesProductos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Articulo": {
+      "type": "string"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Subfamilia": {
+      "type": "string"
+    },
+    "Imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
